@@ -20,8 +20,7 @@ public class SideScrollerController : MonoBehaviour {
 
 		if(Input.GetKey(KeyCode.A))
 			h = -1;
-
-		if(Input.GetKey(KeyCode.D))
+		else if(Input.GetKey(KeyCode.D))
 			h = 1;
 			
 

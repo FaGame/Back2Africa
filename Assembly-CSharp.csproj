@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scenes\CityEscape\Scripts\RestartLevel.cs" />
      <Compile Include="Assets\Scenes\CityEscape\Scripts\SideScrollCamera.cs" />
      <Compile Include="Assets\Scenes\CityEscape\Scripts\SideScrollerController.cs" />
+     <Compile Include="Assets\Scenes\Example\Scripts\DoubleBoxSizeOnCollision.cs" />
      <Compile Include="Assets\Scenes\Menu\Scripts\DelayedMenuOptions.cs" />
      <Compile Include="Assets\Scenes\Menu\Scripts\DestroyTruckOnImpact.cs" />
      <Compile Include="Assets\Scenes\Menu\Scripts\ExplosionTrigger.cs" />
@@ -57,9 +58,10 @@
      <Compile Include="Assets\Scenes\Overworld\Scripts\ChangePlanet.cs" />
      <Compile Include="Assets\Scenes\Overworld\Scripts\DestroyParticleDelay.cs" />
      <Compile Include="Assets\Scenes\Overworld\Scripts\RotateRing.cs" />
-     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
-     <Compile Include="Assets\Scripts\Player\OrbitPlanetPhysics.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\Universal Helper Assets\Scripts\Camera\CameraController.cs" />
+     <Compile Include="Assets\Universal Helper Assets\Scripts\PlanetScripts\AlignToPlanetNormalPhysics.cs" />
+     <Compile Include="Assets\Universal Helper Assets\Scripts\PlanetScripts\OrbitPlanetPhysics.cs" />
+     <Compile Include="Assets\Universal Helper Assets\Scripts\Player\PlayerController.cs" />
      <None Include="Assets\Third Party Assets\Kitten\Shaders\Normal-Diffuse.shader" />
      <None Include="Assets\Models\PizzaPlanetTruck\info.txt" />
      <None Include="Assets\Third Party Assets\Kitten\Shaders\Alpha-Diffuse.shader" />
