@@ -1,0 +1,66 @@
+#
+# Sonic.mtl
+#
+
+newmtl chr_sonic_body01_dif_SD
+illum 2
+Kd 0.800000 0.800000 0.800000
+Ka 0.200000 0.200000 0.200000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd chr_sonic_body01_dif_SD.png
+
+newmtl chr_sonic_cloth_dif_SD
+illum 2
+Kd 0.800000 0.800000 0.800000
+Ka 0.200000 0.200000 0.200000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd chr_sonic_cloth_dif_SD.png
+
+newmtl chr_sonic_eye_dif_SD
+illum 2
+Kd 0.800000 0.800000 0.800000
+Ka 0.200000 0.200000 0.200000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd chr_sonic_eye_dif_SD.png
+
+newmtl chr_sonic_eye_dif_SD
+illum 2
+Kd 0.800000 0.800000 0.800000
+Ka 0.200000 0.200000 0.200000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd chr_sonic_eye_dif_SD.png
+
+newmtl chr_sonic_body01_dif_SD
+illum 2
+Kd 0.800000 0.800000 0.800000
+Ka 0.200000 0.200000 0.200000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd chr_sonic_body01_dif_SD.png
+
+newmtl chr_sonic_shoes_dif_SD
+illum 2
+Kd 0.800000 0.800000 0.800000
+Ka 0.200000 0.200000 0.200000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd chr_sonic_shoes_dif_SD.png
+
+newmtl chr_sonic_shoes_dif_SD
+illum 2
+Kd 0.800000 0.800000 0.800000
+Ka 0.200000 0.200000 0.200000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd chr_sonic_shoes_dif_SD.png

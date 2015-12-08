@@ -1,0 +1,17 @@
+"Maitre Jedi Yoda" "HD 143761/Coruscant"
+{
+	Mesh "yodajm.3ds"
+	Radius 	0.000800
+
+	EllipticalOrbit {	
+		Period 1700000000.00168 
+		SemiMajorAxis 10599.664038 
+		Inclination 102.5 
+	}
+
+	Obliquity 100 
+	Orientation [-90 0 0 1]
+	RotationOffset -90 
+}
+
+

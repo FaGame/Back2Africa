@@ -1,0 +1,20 @@
+"Yoda" "HD 143761/Geonosis"
+
+
+{
+	#Class "spacecraft"
+	
+	Mesh "yodacombat.3ds"
+	#Texture "yodaface.jpg"
+	Radius 0.00178
+
+EllipticalOrbit {
+	Period 4.011680000489 
+	SemiMajorAxis 9401.01213044  
+	Inclination 50.00172 
+}
+
+	Obliquity 50  
+	Orientation [-190 0 0 1] 
+	RotationOffset -90 
+}

@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: 28f3efa24585a7a4a8345e9b615c89bc
+timeCreated: 1449308243
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: bedroll01
+    100002: bridlcontr
+    100004: bridle03
+    100006: bridlestra
+    100008: feather
+    100010: feather01
+    100012: feather02
+    100014: kaadu01
+    100016: kaaeye
+    100018: kaaeye01
+    100020: //RootNode
+    100022: lowsaddle0
+    100024: Object02
+    100026: Object03
+    100028: Object04
+    100030: saddle
+    100032: saddleblan
+    100034: saddlestr0
+    100036: sadstrap
+    100038: Torus01
+    100040: Torus02
+    100042: Torus03
+    100044: Torus04
+    100046: Torus05
+    100048: Torus06
+    100050: Torus07
+    100052: Torus08
+    400000: bedroll01
+    400002: bridlcontr
+    400004: bridle03
+    400006: bridlestra
+    400008: feather
+    400010: feather01
+    400012: feather02
+    400014: kaadu01
+    400016: kaaeye
+    400018: kaaeye01
+    400020: //RootNode
+    400022: lowsaddle0
+    400024: Object02
+    400026: Object03
+    400028: Object04
+    400030: saddle
+    400032: saddleblan
+    400034: saddlestr0
+    400036: sadstrap
+    400038: Torus01
+    400040: Torus02
+    400042: Torus03
+    400044: Torus04
+    400046: Torus05
+    400048: Torus06
+    400050: Torus07
+    400052: Torus08
+    2300000: bedroll01
+    2300002: bridlcontr
+    2300004: bridle03
+    2300006: bridlestra
+    2300008: feather
+    2300010: feather01
+    2300012: feather02
+    2300014: kaadu01
+    2300016: kaaeye
+    2300018: kaaeye01
+    2300020: lowsaddle0
+    2300022: Object02
+    2300024: Object03
+    2300026: Object04
+    2300028: saddle
+    2300030: saddleblan
+    2300032: saddlestr0
+    2300034: sadstrap
+    2300036: Torus01
+    2300038: Torus02
+    2300040: Torus03
+    2300042: Torus04
+    2300044: Torus05
+    2300046: Torus06
+    2300048: Torus07
+    2300050: Torus08
+    3300000: bedroll01
+    3300002: bridlcontr
+    3300004: bridle03
+    3300006: bridlestra
+    3300008: feather
+    3300010: feather01
+    3300012: feather02
+    3300014: kaadu01
+    3300016: kaaeye
+    3300018: kaaeye01
+    3300020: lowsaddle0
+    3300022: Object02
+    3300024: Object03
+    3300026: Object04
+    3300028: saddle
+    3300030: saddleblan
+    3300032: saddlestr0
+    3300034: sadstrap
+    3300036: Torus01
+    3300038: Torus02
+    3300040: Torus03
+    3300042: Torus04
+    3300044: Torus05
+    3300046: Torus06
+    3300048: Torus07
+    3300050: Torus08
+    4300000: bedroll01
+    4300002: bridlcontr
+    4300004: bridle03
+    4300006: bridlestra
+    4300008: feather
+    4300010: feather01
+    4300012: feather02
+    4300014: kaadu01
+    4300016: kaaeye
+    4300018: kaaeye01
+    4300020: lowsaddle0
+    4300022: Object02
+    4300024: Object03
+    4300026: Object04
+    4300028: saddle
+    4300030: saddleblan
+    4300032: saddlestr0
+    4300034: sadstrap
+    4300036: Torus01
+    4300038: Torus02
+    4300040: Torus03
+    4300042: Torus04
+    4300044: Torus05
+    4300046: Torus06
+    4300048: Torus07
+    4300050: Torus08
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

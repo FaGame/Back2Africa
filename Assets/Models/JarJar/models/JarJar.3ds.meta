@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 8f98d8a2ab5dd0144af1f5bcbcfbef42
+timeCreated: 1449308249
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Costume_Sh
+    100002: Costume_Sk
+    100004: Costume_Tr
+    100006: Costume_Ve
+    100008: Derm_Arms
+    100010: Derm_EarsL
+    100012: Derm_EarsU
+    100014: Derm_EyeSt
+    100016: Derm_Face
+    100018: Derm_Feet
+    100020: Derm_Hand0
+    100022: Derm_Hands
+    100024: Derm_Tors0
+    100026: Derm_Torso
+    100028: EarSpikes
+    100030: Eye_Sclera
+    100032: FingerNail
+    100034: //RootNode
+    100036: Object01
+    100038: Object02
+    100040: Object03
+    100042: Object04
+    100044: Sphere01
+    100046: Sphere02
+    100048: Toenails
+    400000: Costume_Sh
+    400002: Costume_Sk
+    400004: Costume_Tr
+    400006: Costume_Ve
+    400008: Derm_Arms
+    400010: Derm_EarsL
+    400012: Derm_EarsU
+    400014: Derm_EyeSt
+    400016: Derm_Face
+    400018: Derm_Feet
+    400020: Derm_Hand0
+    400022: Derm_Hands
+    400024: Derm_Tors0
+    400026: Derm_Torso
+    400028: EarSpikes
+    400030: Eye_Sclera
+    400032: FingerNail
+    400034: //RootNode
+    400036: Object01
+    400038: Object02
+    400040: Object03
+    400042: Object04
+    400044: Sphere01
+    400046: Sphere02
+    400048: Toenails
+    2300000: Costume_Sh
+    2300002: Costume_Sk
+    2300004: Costume_Tr
+    2300006: Costume_Ve
+    2300008: Derm_Arms
+    2300010: Derm_EarsL
+    2300012: Derm_EarsU
+    2300014: Derm_EyeSt
+    2300016: Derm_Face
+    2300018: Derm_Feet
+    2300020: Derm_Hand0
+    2300022: Derm_Hands
+    2300024: Derm_Tors0
+    2300026: Derm_Torso
+    2300028: EarSpikes
+    2300030: Eye_Sclera
+    2300032: FingerNail
+    2300034: Object01
+    2300036: Object02
+    2300038: Object03
+    2300040: Object04
+    2300042: Sphere01
+    2300044: Sphere02
+    2300046: Toenails
+    3300000: Costume_Sh
+    3300002: Costume_Sk
+    3300004: Costume_Tr
+    3300006: Costume_Ve
+    3300008: Derm_Arms
+    3300010: Derm_EarsL
+    3300012: Derm_EarsU
+    3300014: Derm_EyeSt
+    3300016: Derm_Face
+    3300018: Derm_Feet
+    3300020: Derm_Hand0
+    3300022: Derm_Hands
+    3300024: Derm_Tors0
+    3300026: Derm_Torso
+    3300028: EarSpikes
+    3300030: Eye_Sclera
+    3300032: FingerNail
+    3300034: Object01
+    3300036: Object02
+    3300038: Object03
+    3300040: Object04
+    3300042: Sphere01
+    3300044: Sphere02
+    3300046: Toenails
+    4300000: Costume_Sh
+    4300002: Costume_Sk
+    4300004: Costume_Tr
+    4300006: Costume_Ve
+    4300008: Derm_Arms
+    4300010: Derm_EarsL
+    4300012: Derm_EarsU
+    4300014: Derm_EyeSt
+    4300016: Derm_Face
+    4300018: Derm_Feet
+    4300020: Derm_Hand0
+    4300022: Derm_Hands
+    4300024: Derm_Tors0
+    4300026: Derm_Torso
+    4300028: EarSpikes
+    4300030: Eye_Sclera
+    4300032: FingerNail
+    4300034: Object01
+    4300036: Object02
+    4300038: Object03
+    4300040: Object04
+    4300042: Sphere01
+    4300044: Sphere02
+    4300046: Toenails
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

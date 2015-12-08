@@ -1,0 +1,38 @@
+"Jar jar" "HD 144287/Naboo"
+{
+	Class "spacecraft"
+	Mesh "JarJar.3ds"
+	Radius 0.00105                
+
+LongLat [-96.144 19.431 0.08]
+
+	Orientation [125.32 -24.2 35.5 45]
+	RotationOffset 166
+	
+}     
+
+
+"Kaadu" "HD 144287/Naboo"
+{
+	Class "spacecraft"
+	Mesh "kadu.3ds"
+	Radius 0.00179                
+
+LongLat [-96.143987 19.431005 0.080838]
+
+	Orientation [125.49 -24.2 35.5 46.8]
+	RotationOffset 166
+	
+}
+     
+"Jar jar Kaadu" "HD 144287/Naboo"
+{
+	Class "spacecraft"
+	Mesh "jargeneral.3ds"
+	Radius 0.00125                
+LongLat [-99.38 19.42 0.05]
+
+	Orientation [125.3 -24.2 35.55 45]
+	RotationOffset 166
+
+}     

@@ -1,0 +1,31 @@
+"Maitre Jedi Yoda" "HIP 79607/Coruscant"
+{
+	Mesh "yodajm.3ds"
+	Radius 	0.000800
+
+	EllipticalOrbit {	
+		Period 1700000000.00168 
+		SemiMajorAxis 10599.66403 
+		Inclination 102.5 
+	}
+
+	Obliquity 100 
+	Orientation [-90 0 0 1]
+	RotationOffset -90 
+}
+
+"Yoda" "HIP 79607/Coruscant"
+{
+ 
+ 
+ Mesh "yodacombat.3ds"
+ 
+ Radius  0.00045
+
+LongLat [-95.104426 17.42195 0.87]
+Orientation [-75.3 -84.2 -36.5 124]
+
+	RotationOffset 220	
+ 
+	
+}

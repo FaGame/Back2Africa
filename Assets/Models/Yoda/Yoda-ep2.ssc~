@@ -1,0 +1,52 @@
+"Yoda Gunship" "HD 143761/Geonosis"
+
+
+{
+	#Class "spacecraft"
+	
+	Mesh "yoda_saber.3ds"
+	
+	Radius 0.00045
+EllipticalOrbit {
+	Period 4.0116799999291 
+	SemiMajorAxis 8000.2125  
+	Inclination 50.0017 
+}
+
+	Obliquity 50.002  
+	Orientation [-90 0 0 -1] 
+	RotationOffset -90 
+}
+
+"Yoda" "HD 143761/Coruscant"
+{
+ 
+ 
+ Mesh "yodacombat.3ds"
+ 
+ Radius  0.00045
+
+LongLat [-95.104426 17.42195 0.87]
+Orientation [-75.3 -84.2 -36.5 124]
+
+	RotationOffset 220	
+ 
+	
+}
+
+"Yoda bureau palpatine" "HD 143761/Coruscant"
+{
+ 
+ 
+ Mesh "yodajm.3ds"
+ 
+ Radius  0.00045
+
+LongLat [95.104643 17.42202 0.522993]
+Orientation [155.7 -74.2 67.5 65]
+	RotationOffset 120	
+
+
+ 
+	
+}
