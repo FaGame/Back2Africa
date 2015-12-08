@@ -18,11 +18,18 @@ public class SideScrollerController : MonoBehaviour {
 	
 		float h = Input.GetAxis ("Horizontal");
 
+		if(Input.GetKey(KeyCode.A))
+			h = -1;
+
+		if(Input.GetKey(KeyCode.D))
+			h = 1;
+			
+
 		transform.Translate (new Vector3(0, 0, h) * (Time.deltaTime * moveSpeed));
 
 		if(!Jumping)
 		{
-			if(Input.GetButtonDown ("A"))
+			if(Input.GetButtonDown ("A") || Input.GetKeyDown(KeyCode.Space))
 			{		
 				Jump();
 			}
