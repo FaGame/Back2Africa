@@ -63,7 +63,7 @@ public class CameraController : MonoBehaviour {
 
 	void CalcFollowCamera()
 	{
-		float xOffset = 0.0f, yOffset = 1.5f, zOffset = -5.0f;
+		float xOffset = 0.0f, yOffset = 1.5f, zOffset = -3.0f;
 		Vector3 targetPosition = target.transform.rotation * new Vector3(xOffset, yOffset, zOffset) + target.transform.position;
 		transform.rotation = target.transform.rotation;
 		transform.position = targetPosition;
