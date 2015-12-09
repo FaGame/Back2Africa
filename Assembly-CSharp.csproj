@@ -45,6 +45,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scenes\CityEscape\Scripts\PizzaPlanetDriveAndDestroy.cs" />
      <Compile Include="Assets\Scenes\CityEscape\Scripts\RestartLevel.cs" />
      <Compile Include="Assets\Scenes\CityEscape\Scripts\SideScrollCamera.cs" />
      <Compile Include="Assets\Scenes\CityEscape\Scripts\SideScrollerController.cs" />
@@ -59,6 +60,8 @@
      <Compile Include="Assets\Scenes\Overworld\Scripts\DestroyParticleDelay.cs" />
      <Compile Include="Assets\Scenes\Overworld\Scripts\RotateRing.cs" />
      <Compile Include="Assets\Universal Helper Assets\Scripts\Camera\CameraController.cs" />
+     <Compile Include="Assets\Universal Helper Assets\Scripts\ObjectManipulation\DestroyAfterTime.cs" />
+     <Compile Include="Assets\Universal Helper Assets\Scripts\ObjectManipulation\MoveContinuously.cs" />
      <Compile Include="Assets\Universal Helper Assets\Scripts\ObjectManipulation\Rotate.cs" />
      <Compile Include="Assets\Universal Helper Assets\Scripts\PlanetScripts\AlignToPlanetNormalPhysics.cs" />
      <Compile Include="Assets\Universal Helper Assets\Scripts\PlanetScripts\OrbitPlanetPhysics.cs" />
@@ -71,17 +74,11 @@
      <None Include="Assets\Models\JarJar\jarjar-credit.txt" />
      <None Include="Assets\Third Party Assets\skyscrapers\shaders\building.shader" />
      <None Include="Assets\Models\Yoda\credit.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
