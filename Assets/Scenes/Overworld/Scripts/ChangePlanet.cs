@@ -14,7 +14,7 @@ public class ChangePlanet : MonoBehaviour {
 
 	void OnTriggerStay(Collider collision)
 	{
-		if(Input.GetButtonDown ("A"))
+		if(Input.GetButtonDown ("A") || Input.GetKeyDown (KeyCode.Space))
 		{
 		
 			if(collision.gameObject.tag == "Player")
