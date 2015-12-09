@@ -25,7 +25,7 @@ public class CameraController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 		
 		/*
 		if(Input.GetButtonDown ("Y") || Input.GetKeyDown (KeyCode.C))

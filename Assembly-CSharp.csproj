@@ -45,6 +45,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scenes\CityEscape\Scripts\PizzaPlanetDriveAndDestroy.cs" />
      <Compile Include="Assets\Scenes\CityEscape\Scripts\RestartLevel.cs" />
      <Compile Include="Assets\Scenes\CityEscape\Scripts\SideScrollCamera.cs" />
      <Compile Include="Assets\Scenes\CityEscape\Scripts\SideScrollerController.cs" />
@@ -59,6 +60,8 @@
      <Compile Include="Assets\Scenes\Overworld\Scripts\DestroyParticleDelay.cs" />
      <Compile Include="Assets\Scenes\Overworld\Scripts\RotateRing.cs" />
      <Compile Include="Assets\Universal Helper Assets\Scripts\Camera\CameraController.cs" />
+     <Compile Include="Assets\Universal Helper Assets\Scripts\ObjectManipulation\DestroyAfterTime.cs" />
+     <Compile Include="Assets\Universal Helper Assets\Scripts\ObjectManipulation\MoveContinuously.cs" />
      <Compile Include="Assets\Universal Helper Assets\Scripts\ObjectManipulation\Rotate.cs" />
      <Compile Include="Assets\Universal Helper Assets\Scripts\PlanetScripts\AlignToPlanetNormalPhysics.cs" />
      <Compile Include="Assets\Universal Helper Assets\Scripts\PlanetScripts\OrbitPlanetPhysics.cs" />
