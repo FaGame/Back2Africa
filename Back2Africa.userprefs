@@ -1,20 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Universal Helper Assets\Scripts\ObjectManipulation\MoveContinuously.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Universal Helper Assets\Scripts\Camera\CameraController.cs">
     <Files>
       <File FileName="Assets\Universal Helper Assets\Scripts\ObjectManipulation\Rotate.cs" Line="14" Column="2" />
-      <File FileName="Assets\Universal Helper Assets\Scripts\Camera\CameraController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Universal Helper Assets\Scripts\Camera\CameraController.cs" Line="26" Column="2" />
       <File FileName="Assets\Scenes\CityEscape\Scripts\SideScrollerController.cs" Line="1" Column="1" />
       <File FileName="Assets\Universal Helper Assets\Scripts\Player\PlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets\Universal Helper Assets\Scripts\PlanetScripts\OrbitPlanetPhysics.cs" Line="1" Column="1" />
       <File FileName="Assets\Universal Helper Assets\Scripts\PlanetScripts\AlignToPlanetNormalPhysics.cs" Line="1" Column="1" />
       <File FileName="Assets\Scenes\Example\Scripts\DoubleBoxSizeOnCollision.cs" Line="1" Column="1" />
-<<<<<<< HEAD
-      <File FileName="Assets\Scenes\Overworld\Scripts\RotateRing.cs" Line="12" Column="1" />
-=======
-      <File FileName="Assets\Universal Helper Assets\Scripts\ObjectManipulation\DestroyAfterTime.cs" Line="11" Column="34" />
-      <File FileName="Assets\Universal Helper Assets\Scripts\ObjectManipulation\MoveContinuously.cs" Line="49" Column="1" />
->>>>>>> refs/remotes/origin/New-movement-scripts
+      <File FileName="Assets\Universal Helper Assets\Scripts\ObjectManipulation\DestroyAfterTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\Universal Helper Assets\Scripts\ObjectManipulation\MoveContinuously.cs" Line="48" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
