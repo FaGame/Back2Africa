@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scenes\Overworld\Scripts\ChangePlanet.cs" />
      <Compile Include="Assets\Scenes\Overworld\Scripts\DestroyParticleDelay.cs" />
      <Compile Include="Assets\Scenes\Overworld\Scripts\RotateRing.cs" />
+     <Compile Include="Assets\Third Party Assets\ZRNAssets\005135_16321_1_1\Models\ApplyColliders.cs" />
      <Compile Include="Assets\Third Party Assets\ZRNAssets\PQAssets\Scripts\Boss.cs" />
      <Compile Include="Assets\Third Party Assets\ZRNAssets\PQAssets\Scripts\ButtonSound.cs" />
      <Compile Include="Assets\Third Party Assets\ZRNAssets\PQAssets\Scripts\CameraSystem.cs" />
