@@ -82,6 +82,7 @@
      <Compile Include="Assets\Third Party Assets\ZRNAssets\PQAssets\Scripts\SpeedManager.cs" />
      <Compile Include="Assets\Third Party Assets\ZRNAssets\PQAssets\Scripts\StartPanel.cs" />
      <Compile Include="Assets\Third Party Assets\ZRNAssets\PQAssets\Scripts\TutorialScene.cs" />
+     <Compile Include="Assets\Universal Helper Assets\Prefabs\Ring\PlaySoundAndDestroy.cs" />
      <Compile Include="Assets\Universal Helper Assets\Scripts\Camera\CameraController.cs" />
      <Compile Include="Assets\Universal Helper Assets\Scripts\ObjectManipulation\DestroyAfterTime.cs" />
      <Compile Include="Assets\Universal Helper Assets\Scripts\ObjectManipulation\MoveContinuously.cs" />
