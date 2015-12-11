@@ -31,8 +31,8 @@ public class FighterPlayerController : MonoBehaviour {
 	
 	public bool lockedControl;
 	
-	public float moveSpeed = 20.0f;
-	public float jumpHeight = 300f;
+	public float moveSpeed = 2.0f;
+	public float jumpHeight = 350f;
 	
 	private int kickDamage = 10, punchDamage = 5, specialDamage = 25;
 
@@ -157,29 +157,36 @@ public class FighterPlayerController : MonoBehaviour {
 			rb.AddForce(transform.up * jumpHeight, ForceMode.Force);
 		
 		state = PlayerState.Jumping;
-			
-	}
 		
+		Invoke ("End", 0.533f + 0.15f);
+		
+	}
+	
 	void Kick()
 	{
 		KickHitBox.enabled = true;
 		state = PlayerState.Kicking;
+		Invoke ("End", 0.3335f + 0.15f);
 	}
-
+	
 	void Punch()
 	{
 		PunchHitBox.enabled = true;
 		state = PlayerState.Punching;
+		Invoke ("End", 0.25f + 0.15f);
 	}
-
+	
 	void Special()
 	{
 		SpecialHitBox.enabled = true;
 		state = PlayerState.Special;
+		Invoke ("End", 1.335f + 0.15f);
 	}
 	
-	public void End()
+	void End()
 	{
+		if(IsInvoking("End"))
+			CancelInvoke ("End");
 		DisableHitColliders ();
 		state = PlayerState.Idle;
 	}
