@@ -43,6 +43,8 @@ public class FighterAIController : MonoBehaviour {
 	public float moveSpeed = 2.0f;
 	public float jumpHeight = 350f;
 	
+	public int health = 100;
+
 	private int kickDamage = 10, punchDamage = 5, specialDamage = 25;
 	
 	public Collider PunchHitBox, KickHitBox, SpecialHitBox;
@@ -74,7 +76,8 @@ public class FighterAIController : MonoBehaviour {
 		
 		SetAnimationState();
 
-		AIMovement();
+		if(!lockedControl)
+			AIMovement();
 		
 	}
 	
@@ -228,7 +231,7 @@ public class FighterAIController : MonoBehaviour {
 	void Dazed()
 	{
 		state = PlayerState.Dazed;
-		Invoke ("End", 1.335f + 0.15f);
+		Invoke ("End", 1.3f + 0.15f);
 	}
 	
 	void End()
@@ -295,7 +298,7 @@ public class FighterAIController : MonoBehaviour {
 						Dazed ();
 				}
 				else {
-					TakeDamage (specialDamage / 2);
+					TakeDamage (specialDamage / 3);
 				}
 				
 				
@@ -310,7 +313,7 @@ public class FighterAIController : MonoBehaviour {
 						Dazed ();;
 				}
 				else {
-					TakeDamage (punchDamage / 2);
+					TakeDamage (punchDamage / 3);
 				}	
 				
 			}
@@ -324,7 +327,7 @@ public class FighterAIController : MonoBehaviour {
 						Dazed ();
 				}
 				else {
-					TakeDamage (kickDamage / 2);
+					TakeDamage (kickDamage / 3);
 				}
 				
 			}
@@ -359,9 +362,15 @@ public class FighterAIController : MonoBehaviour {
 		}
 		
 	}
+
 	public void TakeDamage(int Damage)
 	{
-		Debug.Log (Damage);
+		if(health > 0)
+			health -= Damage;
+		
+		if(health < 0)
+			health = 0;
+		
 	}
 	
 	public void SetAnimationState()

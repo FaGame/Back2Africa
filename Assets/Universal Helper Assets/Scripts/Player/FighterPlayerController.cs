@@ -34,7 +34,9 @@ public class FighterPlayerController : MonoBehaviour {
 	
 	public float moveSpeed = 2.0f;
 	public float jumpHeight = 350f;
-	
+
+	public int health = 100;	
+
 	private int kickDamage = 10, punchDamage = 5, specialDamage = 25;
 
 	public Collider PunchHitBox, KickHitBox, SpecialHitBox;
@@ -241,7 +243,7 @@ public class FighterPlayerController : MonoBehaviour {
 						Dazed ();
 				}
 				else {
-					TakeDamage (specialDamage / 2);
+					TakeDamage (specialDamage / 3);
 				}
 				
 				
@@ -256,7 +258,7 @@ public class FighterPlayerController : MonoBehaviour {
 						Dazed ();;
 				}
 				else {
-					TakeDamage (punchDamage / 2);
+					TakeDamage (punchDamage / 3);
 				}	
 							
 			}
@@ -270,7 +272,7 @@ public class FighterPlayerController : MonoBehaviour {
 						Dazed ();
 				}
 				else {
-					TakeDamage (kickDamage / 2);
+					TakeDamage (kickDamage / 3);
 				}
 				
 			}
@@ -282,7 +284,12 @@ public class FighterPlayerController : MonoBehaviour {
 
 	public void TakeDamage(int Damage)
 	{
-		Debug.Log (Damage);
+		if(health > 0)
+			health -= Damage;
+	
+		if(health < 0)
+			health = 0;
+		
 	}
 
 	public void SetAnimationState()
