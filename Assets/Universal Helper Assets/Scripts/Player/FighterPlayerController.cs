@@ -33,6 +33,10 @@ public class FighterPlayerController : MonoBehaviour {
 	
 	public float moveSpeed = 20.0f;
 	public float jumpHeight = 300f;
+	
+	private int kickDamage = 10, punchDamage = 5, specialDamage = 25;
+
+	public Collider PunchHitBox, KickHitBox, SpecialHitBox;
 
 	private bool facingRight;
 	
@@ -41,7 +45,17 @@ public class FighterPlayerController : MonoBehaviour {
 		
 		rb = GetComponent<Rigidbody>();
 		anim = GetComponent<Animator>();
+
+		// disable hit colliders
+		DisableHitColliders();
 		
+	}
+
+	void DisableHitColliders()
+	{
+		PunchHitBox.enabled = false;
+		KickHitBox.enabled = false;
+		SpecialHitBox.enabled = false;
 	}
 
 	// Update is called once per frame
@@ -49,7 +63,6 @@ public class FighterPlayerController : MonoBehaviour {
 		
 		FaceEnemy();
 
-		
 		CheckGroundCollision ();
 
 		SetAnimationState();
@@ -149,21 +162,25 @@ public class FighterPlayerController : MonoBehaviour {
 		
 	void Kick()
 	{
+		KickHitBox.enabled = true;
 		state = PlayerState.Kicking;
 	}
 
 	void Punch()
 	{
+		PunchHitBox.enabled = true;
 		state = PlayerState.Punching;
 	}
 
 	void Special()
 	{
+		SpecialHitBox.enabled = true;
 		state = PlayerState.Special;
 	}
 	
 	public void End()
 	{
+		DisableHitColliders ();
 		state = PlayerState.Idle;
 	}
 	
@@ -194,9 +211,55 @@ public class FighterPlayerController : MonoBehaviour {
 		
 	}
 
+	void OnTriggerEnter(Collider collider)
+	{
+		if(collider.transform.IsChildOf(enemy.transform))
+		{
+			if(collider.gameObject.name == "SpecialHitBox")
+			{
+				rb.AddForce ((transform.position - enemy.transform.position).normalized * 200);
+				if(!state.Equals (PlayerState.WalkingBackward))
+					TakeDamage (specialDamage);
+				else {
+					TakeDamage (specialDamage / 2);
+				}
+			}
+			else if(collider.gameObject.name == "PunchHitBox")
+			{
+				rb.AddForce ((transform.position - enemy.transform.position).normalized * 100);
+				if(!state.Equals (PlayerState.WalkingBackward))
+					TakeDamage (punchDamage);
+				else {
+					TakeDamage (punchDamage / 2);
+				}	
+		
+			}
+			else if(collider.gameObject.name == "KickHitBox")
+			{
+				rb.AddForce ((transform.position - enemy.transform.position).normalized * 125);
+				if(!state.Equals (PlayerState.WalkingBackward))
+					TakeDamage (kickDamage);
+				else {
+					TakeDamage (kickDamage / 2);
+				}
+			}
+			
+			DisableHitColliders ();
+			if(collider.gameObject.name == "HurtBox")
+				Debug.Log ("Hit" + gameObject);
+
+		}
+	}	
+	
+
 	void OnCollisionEnter(Collision collision)
 	{	
 
+	}
+
+	public void TakeDamage(int Damage)
+	{
+		Debug.Log (Damage);
 	}
 
 	public void SetAnimationState()
