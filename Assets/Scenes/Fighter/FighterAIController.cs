@@ -21,7 +21,8 @@ public class FighterAIController : MonoBehaviour {
 		Kicking, // 4
 		Punching, // 5
 		Special, //6
-		Dead // 7
+		Dazed, //7
+		Dead // 8
 	}
 
 	public enum AIState
@@ -98,7 +99,8 @@ public class FighterAIController : MonoBehaviour {
 
 	void AIMovement()
 	{
-	
+	  if(!state.Equals (PlayerState.Dazed))
+	  {
 		// if walking or idle
 		if(!state.Equals (PlayerState.Jumping) && !state.Equals (PlayerState.Kicking) && !state.Equals (PlayerState.Punching) && !state.Equals (PlayerState.Special))
 		{		
@@ -168,6 +170,7 @@ public class FighterAIController : MonoBehaviour {
 			}
 
 		}
+	  }
 			
 	}
 	
@@ -221,6 +224,12 @@ public class FighterAIController : MonoBehaviour {
 		state = PlayerState.Special;
 		Invoke ("End", 1.335f + 0.15f);
 	}
+
+	void Dazed()
+	{
+		state = PlayerState.Dazed;
+		Invoke ("End", 1.335f + 0.15f);
+	}
 	
 	void End()
 	{
@@ -270,24 +279,36 @@ public class FighterAIController : MonoBehaviour {
 	{
 		if(collider.transform.IsChildOf(enemy.transform))
 		{
+			
 			if(Random.value <= 0.1f)
 			{
 				SetAIStateDefensive();
 			}
+
 			if(collider.gameObject.name == "SpecialHitBox")
 			{
 				rb.AddForce ((transform.position - enemy.transform.position).normalized * 200);
 				if(!state.Equals (PlayerState.WalkingBackward))
+				{
 					TakeDamage (specialDamage);
+					if(!state.Equals (PlayerState.Dazed))
+						Dazed ();
+				}
 				else {
 					TakeDamage (specialDamage / 2);
 				}
+				
+				
 			}
 			else if(collider.gameObject.name == "PunchHitBox")
 			{
 				rb.AddForce ((transform.position - enemy.transform.position).normalized * 100);
 				if(!state.Equals (PlayerState.WalkingBackward))
+				{
 					TakeDamage (punchDamage);
+					if(!state.Equals (PlayerState.Dazed))
+						Dazed ();;
+				}
 				else {
 					TakeDamage (punchDamage / 2);
 				}	
@@ -297,16 +318,18 @@ public class FighterAIController : MonoBehaviour {
 			{
 				rb.AddForce ((transform.position - enemy.transform.position).normalized * 125);
 				if(!state.Equals (PlayerState.WalkingBackward))
+				{
 					TakeDamage (kickDamage);
+					if(!state.Equals (PlayerState.Dazed))
+						Dazed ();
+				}
 				else {
 					TakeDamage (kickDamage / 2);
 				}
+				
 			}
 			
-			DisableHitColliders ();
-			if(collider.gameObject.name == "HurtBox")
-				Debug.Log ("Hit" + gameObject);
-			
+			DisableHitColliders ();	
 		}
 	}	
 	
