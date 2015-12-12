@@ -228,7 +228,8 @@ public class FighterPlayerController : MonoBehaviour {
 		}
 		
 	}
-
+	
+	public ParticleSystem hitEffect;
 	void OnTriggerEnter(Collider collider)
 	{
 		if(collider.transform.IsChildOf(enemy.transform))
@@ -246,7 +247,7 @@ public class FighterPlayerController : MonoBehaviour {
 					TakeDamage (specialDamage / 3);
 				}
 				
-				
+				ParticleSystem he = (ParticleSystem) Instantiate (hitEffect, collider.gameObject.transform.position, Quaternion.identity);
 			}
 			else if(collider.gameObject.name == "PunchHitBox")
 			{
@@ -260,7 +261,7 @@ public class FighterPlayerController : MonoBehaviour {
 				else {
 					TakeDamage (punchDamage / 3);
 				}	
-							
+				ParticleSystem he = (ParticleSystem) Instantiate (hitEffect, collider.gameObject.transform.position, Quaternion.identity);
 			}
 			else if(collider.gameObject.name == "KickHitBox")
 			{
@@ -274,7 +275,7 @@ public class FighterPlayerController : MonoBehaviour {
 				else {
 					TakeDamage (kickDamage / 3);
 				}
-				
+				ParticleSystem he = (ParticleSystem) Instantiate (hitEffect, collider.gameObject.transform.position, Quaternion.identity);
 			}
 			
 			DisableHitColliders ();	

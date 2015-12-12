@@ -33,12 +33,11 @@ public class FighterCameraController : MonoBehaviour {
 		lookAtPos.y += 1;
 		Quaternion cameraRot = Quaternion.LookRotation (lookAtPos - transform.position);
 		cameraPos.x = cameraDistance;
-		cameraPos.y += 2.0f;
+		cameraPos.y += 1.0f;
 
 		transform.position = Vector3.Lerp (transform.position, cameraPos, Time.deltaTime * lerpSpeed);
 		transform.rotation = Quaternion.Lerp (transform.rotation, cameraRot, Time.deltaTime * lerpSpeed);
-				
-		
+					
 	}
 	
 }

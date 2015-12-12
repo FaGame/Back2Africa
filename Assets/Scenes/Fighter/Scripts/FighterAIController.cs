@@ -95,7 +95,7 @@ public class FighterAIController : MonoBehaviour {
 			facingRight = false;
 		}
 		
-		Debug.Log (facingRight);
+		
 		transform.rotation = r;
 	}
 
@@ -118,20 +118,14 @@ public class FighterAIController : MonoBehaviour {
 			}
 			else if(aiState.Equals (AIState.Defensive))
 			{
-				if(!CheckWallCollision ())
-				{
-					state = PlayerState.WalkingBackward;
 				
-					float h = -1;
+				state = PlayerState.WalkingBackward;
 				
-					Vector3 velocity = new Vector3(0,0,h) * moveSpeed;
-					transform.Translate(velocity * Time.deltaTime);	
-				}
-				else
-				{
-					state = PlayerState.Idle;
-				}
+				float h = -1;
 				
+				Vector3 velocity = new Vector3(0,0,h) * moveSpeed;
+				transform.Translate(velocity * Time.deltaTime);	
+						
 				// Handle Jumping
 				if(Vector3.Distance (transform.position, enemy.transform.position) >= 1.0f && Vector3.Distance (transform.position, enemy.transform.position) <= 2.0f && !CheckWallCollision ())
 				{
@@ -278,6 +272,8 @@ public class FighterAIController : MonoBehaviour {
 		
 	}
 	
+
+	public ParticleSystem hitEffect;
 	void OnTriggerEnter(Collider collider)
 	{
 		if(collider.transform.IsChildOf(enemy.transform))
@@ -301,7 +297,7 @@ public class FighterAIController : MonoBehaviour {
 					TakeDamage (specialDamage / 3);
 				}
 				
-				
+				ParticleSystem he = (ParticleSystem) Instantiate (hitEffect, collider.gameObject.transform.position, Quaternion.identity);
 			}
 			else if(collider.gameObject.name == "PunchHitBox")
 			{
@@ -315,7 +311,7 @@ public class FighterAIController : MonoBehaviour {
 				else {
 					TakeDamage (punchDamage / 3);
 				}	
-				
+				ParticleSystem he = (ParticleSystem) Instantiate (hitEffect, collider.gameObject.transform.position, Quaternion.identity);
 			}
 			else if(collider.gameObject.name == "KickHitBox")
 			{
@@ -329,7 +325,7 @@ public class FighterAIController : MonoBehaviour {
 				else {
 					TakeDamage (kickDamage / 3);
 				}
-				
+				ParticleSystem he = (ParticleSystem) Instantiate (hitEffect, collider.gameObject.transform.position, Quaternion.identity);
 			}
 			
 			DisableHitColliders ();	
