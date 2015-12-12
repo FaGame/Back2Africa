@@ -4,10 +4,6 @@ using System.Collections;
 
 [RequireComponent(typeof(Animator))]
 
-/* APPLY TO PLAYER OBJECT 
-	   TWEAK MOVE, ROTATE AND JUMP POWER AS NECESSARY
-	*/
-
 public class FighterPlayerController : MonoBehaviour {
 
 	public GameObject enemy;
@@ -75,6 +71,7 @@ public class FighterPlayerController : MonoBehaviour {
 	
 		if(health <= 0)
 		{
+			CancelInvoke ("End");
 			state = PlayerState.Dead;
 		}
 		
