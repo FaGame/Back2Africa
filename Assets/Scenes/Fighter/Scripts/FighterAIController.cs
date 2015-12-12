@@ -78,6 +78,11 @@ public class FighterAIController : MonoBehaviour {
 
 		if(!lockedControl)
 			AIMovement();
+
+		if(health <= 0)
+		{
+			state = PlayerState.Dead;
+		}
 		
 	}
 	
@@ -365,7 +370,9 @@ public class FighterAIController : MonoBehaviour {
 			health -= Damage;
 		
 		if(health < 0)
+		{
 			health = 0;
+		}
 		
 	}
 	

@@ -72,6 +72,11 @@ public class FighterPlayerController : MonoBehaviour {
 
 		if(!lockedControl)
 			InputMovement();
+	
+		if(health <= 0)
+		{
+			state = PlayerState.Dead;
+		}
 		
 	}
 
@@ -289,7 +294,9 @@ public class FighterPlayerController : MonoBehaviour {
 			health -= Damage;
 	
 		if(health < 0)
+		{
 			health = 0;
+		}
 		
 	}
 

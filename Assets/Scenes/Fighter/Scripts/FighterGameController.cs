@@ -56,13 +56,15 @@ public class FighterGameController : MonoBehaviour {
 		if(gameState.Equals (GameState.Countdown))
 		{
 
-			p1Script.lockedControl = true;
-			p2Script.lockedControl = true;
-
 			if(timer == null)
 			{
 				timer = new Stopwatch();
 				timer.Start();
+
+				p1Script.lockedControl = true;
+				p2Script.lockedControl = true;
+				p1Script.state = FighterPlayerController.PlayerState.Idle;
+				p2Script.state = FighterAIController.PlayerState.Idle;
 			}
 			
 			time = 3 - (int) timer.Elapsed.TotalSeconds;
