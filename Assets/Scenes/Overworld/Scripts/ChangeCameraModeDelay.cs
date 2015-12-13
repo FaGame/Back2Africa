@@ -14,6 +14,6 @@ public class ChangeCameraModeDelay : MonoBehaviour {
 	void ChangeCamera()
 	{
 		GetComponent<CameraController>().cameraType = CameraController.CameraType.Follow;
-		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().lockedControl = false;
+		//GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().lockedControl = false;
 	}
 }

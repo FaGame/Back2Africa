@@ -297,6 +297,15 @@ public class FighterPlayerController : MonoBehaviour {
 		
 	}
 
+	void OnCollisionEnter(Collision collision)
+	{
+		if(collision.gameObject == enemy)
+		{
+			if(transform.position.y > enemy.transform.position.y)
+				rb.AddForce (-transform.forward * 100);
+		}
+	}
+
 	public void SetAnimationState()
 	{
 		anim.SetInteger ("State", (int)state);

@@ -372,6 +372,14 @@ public class FighterAIController : MonoBehaviour {
 		}
 		
 	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		if(collision.gameObject == enemy)
+		{
+			rb.AddForce ((transform.position - enemy.transform.position).normalized * 100);
+		}
+	}
 	
 	public void SetAnimationState()
 	{
