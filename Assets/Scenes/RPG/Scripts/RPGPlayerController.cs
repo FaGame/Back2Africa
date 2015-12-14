@@ -62,7 +62,7 @@ public class RPGPlayerController : MonoBehaviour {
 
 		}
 
-		if(actionState.Equals (ActionState.Walking))
+		else if(actionState.Equals (ActionState.Walking))
 		{
 	
 			if(v != 0 || h != 0)
