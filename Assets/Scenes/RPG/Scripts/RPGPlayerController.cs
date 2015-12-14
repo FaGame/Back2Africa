@@ -13,20 +13,17 @@ public class RPGPlayerController : MonoBehaviour {
 	{
 		Idle,                 // 0
 		Walking,              // 1
-		Jumping,              // 2
-		RunningJumping,       // 3
-		RunningLanding,       // 4
-		MeleeAttacking,       // 5
-		Casting1Hand,         // 6
-		Casting2Hand,         // 7
-		VerticalCasting1Hand, // 8
-		VerticalCasting2Hand, // 9
-		Dead                  // 10
+		MeleeAttacking,       // 2
+		Casting1Hand,         // 3
+		Casting2Hand,         // 4
+		VerticalCasting1Hand, // 5
+		VerticalCasting2Hand, // 6
+		Dead                  // 7
 	}
 
 	public ActionState actionState;
 
-	public float moveSpeed = 1.0f, jumpForce = 300f;
+	public float moveSpeed = 1.0f;
 
 	private float strafe, forward;
 
@@ -63,12 +60,6 @@ public class RPGPlayerController : MonoBehaviour {
 				actionState = ActionState.Walking;
 			}
 
-			if(Input.GetButton ("Jump"))
-			{
-				rb.AddForce(transform.up * jumpForce, ForceMode.Force);
-				//actionState = ActionState.Jumping;
-			}
-
 		}
 
 		if(actionState.Equals (ActionState.Walking))
@@ -76,7 +67,7 @@ public class RPGPlayerController : MonoBehaviour {
 	
 			if(v != 0 || h != 0)
 			{
-				rb.AddForce (transform.right * h * moveSpeed, ForceMode.VelocityChange); 
+				rb.AddForce ((transform.right * h) / 2, ForceMode.VelocityChange); 
 
 				if(v != 0)
 				{
@@ -87,13 +78,6 @@ public class RPGPlayerController : MonoBehaviour {
 			}
 			else {
 				actionState = ActionState.Idle;
-			}
-
-
-			if(Input.GetButton ("Jump"))
-			{
-				rb.AddForce((transform.up) * jumpForce, ForceMode.VelocityChange);
-				actionState = ActionState.RunningJumping;
 			}
 
 		}
