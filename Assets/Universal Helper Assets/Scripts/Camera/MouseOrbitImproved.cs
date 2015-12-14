@@ -1,22 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [AddComponentMenu("Camera-Control/Mouse Orbit with zoom")]
 public class MouseOrbitImproved : MonoBehaviour {
 	
 	public Transform target;
 	public float distance = 5.0f;
-	public float xSpeed = 120.0f;
-	public float ySpeed = 120.0f;
+	public float xSpeed = 80.0f;
+	public float ySpeed = 80.0f;
 	
-	public float yMinLimit = -20f;
+	public float yMinLimit = 0f;
 	public float yMaxLimit = 80f;
 	
 	public float distanceMin = .5f;
 	public float distanceMax = 15f;
 	
 	private Rigidbody rigidbody;
-	
+
+	private List<GameObject> hitObjects = new List<GameObject>();
+
 	float x = 0.0f;
 	float y = 0.0f;
 	
@@ -40,8 +43,12 @@ public class MouseOrbitImproved : MonoBehaviour {
 	{
 		if (target) 
 		{
+		
+			x += Input.GetAxis("RightHorizontal") * xSpeed * distance * 0.02f;
+			y -= Input.GetAxis("RightVertical") * ySpeed * 0.02f;	
 			x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
-			y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+			y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;	
+			
 			
 			y = ClampAngle(y, yMinLimit, yMaxLimit);
 			
@@ -50,15 +57,40 @@ public class MouseOrbitImproved : MonoBehaviour {
 			distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel")*5, distanceMin, distanceMax);
 			
 			RaycastHit hit;
-			if (Physics.Linecast (target.position, transform.position, out hit)) 
+			if(Physics.Linecast (target.position, transform.position, out hit))
 			{
-				distance -=  hit.distance;
+				GameObject go = hit.collider.gameObject;
+				if(!hitObjects.Contains (go))
+				{
+					hitObjects.Add (go);
+					go.GetComponent<Renderer>().material.shader = Shader.Find("Alpha/Diffuse");
+				}			
 			}
+			else {
+				foreach(GameObject go in hitObjects)
+				{
+					go.GetComponent<Renderer>().material.shader = Shader.Find("Legacy Shaders/Specular");	
+				}			
+				hitObjects.Clear ();
+			}
+	
 			Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
 			Vector3 position = rotation * negDistance + target.position;
 			
 			transform.rotation = rotation;
 			transform.position = position;
+
+		}
+	}
+
+	public void SetRendererAlphas(float alpha, GameObject go) {
+		Renderer[] mRenderers = go.GetComponentsInChildren<Renderer>();
+		for(int i = 0; i < mRenderers.Length; i++) {
+			for(int j = 0; j < mRenderers[i].materials.Length; j++) {
+				Color matColor = mRenderers[i].materials[j].color;
+				matColor.a = alpha;
+				mRenderers[i].materials[j].color = matColor;
+			}
 		}
 	}
 	

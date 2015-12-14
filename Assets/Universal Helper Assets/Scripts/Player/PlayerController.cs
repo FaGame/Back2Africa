@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour {
 		dist = 0.08f;
 		dir = -Vector3.up;
 		Vector3 pos1, pos2, pos3; 
-		CapsuleCollider col = GetComponent<CapsuleCollider>();
+		Collider col = GetComponent<Collider>();
 		pos1 = new Vector3(transform.position.x, transform.position.y, col.bounds.extents.z); 
 		pos2 = new Vector3(transform.position.x, transform.position.y, -col.bounds.extents.z); 
 		pos3 = transform.position;
